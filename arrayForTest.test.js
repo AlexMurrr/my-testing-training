@@ -1,6 +1,10 @@
-const fruitT = require( "./arrayForTest")
+const arrayForTest = require( "./arrayForTest")
 
-let fruit = fruitT;
+let arrayNum = arrayForTest.arrayNumber;
+
+const fruit = arrayForTest.fruit;
+
+const sortAr = arrayForTest.sortArray;
 
 let checkForString = (array) => {
     for(let item of array){
@@ -10,6 +14,7 @@ let checkForString = (array) => {
         
     }
 }
+
 
 test ('extend is array', ()=>{    
     expect(fruit).toStrictEqual(["banana", "banana", "apple", "orange", "apple"]);
@@ -23,5 +28,17 @@ test ('containe item', ()=>{
     expect(fruit).toContain('apple');
 })
 
+
+describe('sort arrays', () => {
+
+    test('checked undefined',() => {
+        expect(fruit).not.toBeundefined;
+    }),
+    test('sort of array numbers', () => {
+        expect(sortAr(arrayNum)).toStrictEqual([1,2,3,4,5,150]);
+    })
+})
+
+console.log(arrayNum);
 
 
