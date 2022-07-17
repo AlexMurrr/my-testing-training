@@ -4,11 +4,14 @@
   "description": "",
   "main": "array.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "tc": "jest --coverage"
+    
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
     "jest": "^28.1.3"
   }
 }
