@@ -1,10 +1,9 @@
 const arrayForTest = require( "./arrayForTest")
 
-let arrayNum = arrayForTest.arrayNumber;
-
+const arrayNum = arrayForTest.arrayNumber;
 const fruit = arrayForTest.fruit;
-
 const sortAr = arrayForTest.sortArray;
+const fruitSort = arrayForTest.fruitSort;
 
 let checkForString = (array) => {
     for(let item of array){
@@ -15,6 +14,9 @@ let checkForString = (array) => {
     }
 }
 
+function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+}
 
 test ('extend is array', ()=>{    
     expect(fruit).toStrictEqual(["banana", "banana", "apple", "orange", "apple"]);
@@ -39,6 +41,26 @@ describe('sort arrays', () => {
     })
 })
 
-console.log(arrayNum);
+
+describe('check object resulting from array', () => {
+    test('checking for define', () => {
+        expect(fruitSort(fruit)).toBeDefined;
+    });
+
+    const fruitObj = fruitSort(fruit);
+    
+    test('check empty object', () => {
+        expect(isEmpty(fruitObj)).toBeFalsy();
+    });    
+
+    test('checking for an object', () => {
+        expect(Array.isArray(fruitObj)).not.toBeTruthy();
+        expect(fruitObj['1']).toBe("banana");
+        
+    })
+});
+
+//const fruitObj = fruitSort(fruit);
+//console.log(fruitObj['1'])
 
 
