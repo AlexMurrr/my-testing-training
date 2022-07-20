@@ -4,6 +4,7 @@ const arrayNum = arrayForTest.arrayNumber;
 const fruit = arrayForTest.fruit;
 const sortAr = arrayForTest.sortArray;
 const fruitSort = arrayForTest.fruitSort;
+const topProp = arrayForTest.topPropInObj;
 
 let checkForString = (array) => {
     for(let item of array){
@@ -62,5 +63,23 @@ describe('check object resulting from array', () => {
 
 //const fruitObj = fruitSort(fruit);
 //console.log(fruitObj['1'])
+
+const salaries = {
+    "Katy": 150,
+    "John": 100,
+    "Pete": 300,
+    "Mary": 250
+  };
+
+  describe ('check function topPropInObj',() => {
+    test ('is not undefined', ()=>{
+        expect(topProp(salaries)).not.toBeUndefined();
+    });
+    test ('name properties with max properties', ()=>{
+        expect(topProp(salaries)).toBe('Pete')
+    });
+  }
+
+  )
 
 

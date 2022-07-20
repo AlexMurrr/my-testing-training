@@ -16,3 +16,23 @@ exports.fruitSort = (array) => {
         return acc; 
     }, {})
 }
+
+//деконструирующее присваивание
+
+function topPropInObj (obj) {
+
+   max = 0;
+   nameProp = 0;
+
+   for (const [name, num] of Object.entries(obj)){
+      if(max<num){
+         max=num;
+         nameProp=name;
+      }
+      
+   }
+   return nameProp;  
+
+}
+
+exports.topPropInObj = topPropInObj;
