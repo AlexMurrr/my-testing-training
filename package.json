@@ -5,8 +5,7 @@
   "main": "array.js",
   "scripts": {
     "test": "jest",
-    "tc": "jest --coverage"
-    
+    "tc": "jest --coverage"        
   },
   "author": "",
   "license": "ISC",

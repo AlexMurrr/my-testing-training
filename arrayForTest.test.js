@@ -5,6 +5,7 @@ const fruit = arrayForTest.fruit;
 const sortAr = arrayForTest.sortArray;
 const fruitSort = arrayForTest.fruitSort;
 const topProp = arrayForTest.topPropInObj;
+const sumsal = arrayForTest.sumSalary;
 
 let checkForString = (array) => {
     for(let item of array){
@@ -82,4 +83,30 @@ const salaries = {
 
   )
 
+  const company = {
+    sales:[{name:'John', salary: 100},
+            {name:'Alice', salary: 100}],
+    development:{
+        sites:[{name:'Peter', salary:100},
+               {name: 'Alex', salary: 100}],
+        internals:[{name:'Jack', salary:100}]
+    }   
+       
+  }
 
+  const company1 = {
+    sales:[{name:'John', salary: 100},
+            {name:'Alice', salary: 100}],
+
+  }
+
+describe('checking the recursion', ()=> {
+    test('not undefined', () => {
+        expect(sumsal(company)).toBeDefined();
+    });
+    test('checking sum', ()=> {
+        expect(sumsal(company)).toBe(500);
+    })
+})
+
+  

@@ -35,4 +35,20 @@ function topPropInObj (obj) {
 
 }
 
+//рекурсия
+function sumSalary(department){
+   if(Array.isArray(department)){
+      return department.reduce ((sum, cur) => sum + cur.salary,0)
+   }else{
+      sum=0;
+      for(let subDep of Object.values(department)){
+         sum += sumSalary(subDep);
+      }
+      return sum;
+   }
+}
+
+
+
+exports.sumSalary = sumSalary;
 exports.topPropInObj = topPropInObj;
