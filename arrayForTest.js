@@ -47,7 +47,7 @@ function sumSalary(department){
    }
 }
 
-
+//плоский массив
 function flatten(array){
 
    const res = [];
@@ -64,7 +64,7 @@ function flatten(array){
    }
    return res;
 }
-
-
+console.log(flatten([[1],[1,[1]],2]))
+exports.flatten = flatten;
 exports.sumSalary = sumSalary;
 exports.topPropInObj = topPropInObj;

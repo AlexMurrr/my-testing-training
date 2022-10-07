@@ -6,6 +6,7 @@ const sortAr = arrayForTest.sortArray;
 const fruitSort = arrayForTest.fruitSort;
 const topProp = arrayForTest.topPropInObj;
 const sumsal = arrayForTest.sumSalary;
+const flatt = arrayForTest.flatten;
 
 let checkForString = (array) => {
     for(let item of array){
@@ -108,5 +109,11 @@ describe('checking the recursion', ()=> {
         expect(sumsal(company)).toBe(500);
     })
 })
+
+test('make flat array', ()=>{{    
+    const ar = [[1,1], [1,1,[1]]];    
+    expect(flatt(ar)).toHaveLength(5);
+}})
+
 
   
