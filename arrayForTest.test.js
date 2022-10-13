@@ -7,6 +7,7 @@ const fruitSort = arrayForTest.fruitSort;
 const topProp = arrayForTest.topPropInObj;
 const sumsal = arrayForTest.sumSalary;
 const flatt = arrayForTest.flatten;
+const arrFromStr = arrayForTest.arrayFromString;
 
 let checkForString = (array) => {
     for(let item of array){
@@ -110,10 +111,24 @@ describe('checking the recursion', ()=> {
     })
 })
 
-test('make flat array', ()=>{{    
+test('make flat array', ()=>{   
     const ar = [[1,1], [1,1,[1]]];    
     expect(flatt(ar)).toHaveLength(5);
-}})
+})
+
+
+describe('check function array from string', ()=>{
+    const str = 'a, b'
+    test('check is array', ()=>{
+        expect(Array.isArray(arrFromStr(str))).toBeTruthy();
+    })
+
+    test('array from string', ()=>{        
+        expect(arrFromStr(str)).toContain('a');        
+    })
+})
+
+
 
 
   

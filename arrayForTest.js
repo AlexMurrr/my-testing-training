@@ -64,7 +64,16 @@ function flatten(array){
    }
    return res;
 }
-console.log(flatten([[1],[1,[1]],2]))
+
+function arrayFromString(str){      
+   return str.split(", ");
+ }
+
+function trueOneWord(inputVerb, trueVerb){      
+   return this.arrayFromString(trueVerb).includes(inputVerb);       
+ }
+
 exports.flatten = flatten;
 exports.sumSalary = sumSalary;
 exports.topPropInObj = topPropInObj;
+exports.arrayFromString = arrayFromString;
