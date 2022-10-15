@@ -9,6 +9,7 @@ const sumsal = arrayForTest.sumSalary;
 const flatt = arrayForTest.flatten;
 const arrFromStr = arrayForTest.arrayFromString;
 const trueOneWord = arrayForTest.trueOneWord;
+const removeEmptySpace = arrayForTest.removeEmptySpace;
 
 let checkForString = (array) => {
     for(let item of array){
@@ -138,6 +139,18 @@ describe('check function trueOneWord',()=>{
     test('if all word true', ()=>{
         expect(trueOneWord('a', oneItems)).toBeTruthy();
     }) 
+})
+
+describe('check function removeEmptySpace', ()=>{
+    const haveInternalSpace = 'a  a   a  a a';
+    const hasExternalSpace = '   a     ';
+
+    test('check internal empty space', ()=>{
+        expect(removeEmptySpace(haveInternalSpace)).toBe('aaaaa');
+    })
+    test('check external space', ()=>{
+        expect(removeEmptySpace(hasExternalSpace)).toBe('a')
+    })
 })
 
 

@@ -74,8 +74,13 @@ function trueOneWord(inputVerb, trueVerb){
    return trueStr.includes(inputVerb);       
  }
 
+ function removeEmptySpace(verb){
+   return verb.replace(/\s/g,'');
+ }
+
 exports.flatten = flatten;
 exports.sumSalary = sumSalary;
 exports.topPropInObj = topPropInObj;
 exports.arrayFromString = arrayFromString;
 exports.trueOneWord = trueOneWord;
+exports.removeEmptySpace = removeEmptySpace;
