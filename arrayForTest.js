@@ -69,11 +69,13 @@ function arrayFromString(str){
    return str.split(", ");
  }
 
-function trueOneWord(inputVerb, trueVerb){      
-   return this.arrayFromString(trueVerb).includes(inputVerb);       
+function trueOneWord(inputVerb, trueVerb){   
+   const trueStr = trueVerb.split(", ");      
+   return trueStr.includes(inputVerb);       
  }
 
 exports.flatten = flatten;
 exports.sumSalary = sumSalary;
 exports.topPropInObj = topPropInObj;
 exports.arrayFromString = arrayFromString;
+exports.trueOneWord = trueOneWord;

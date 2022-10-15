@@ -8,6 +8,7 @@ const topProp = arrayForTest.topPropInObj;
 const sumsal = arrayForTest.sumSalary;
 const flatt = arrayForTest.flatten;
 const arrFromStr = arrayForTest.arrayFromString;
+const trueOneWord = arrayForTest.trueOneWord;
 
 let checkForString = (array) => {
     for(let item of array){
@@ -116,9 +117,11 @@ test('make flat array', ()=>{
     expect(flatt(ar)).toHaveLength(5);
 })
 
+const str = 'a, b';
+const oneItems = 'a';
 
 describe('check function array from string', ()=>{
-    const str = 'a, b'
+    
     test('check is array', ()=>{
         expect(Array.isArray(arrFromStr(str))).toBeTruthy();
     })
@@ -127,6 +130,17 @@ describe('check function array from string', ()=>{
         expect(arrFromStr(str)).toContain('a');        
     })
 })
+
+describe('check function trueOneWord',()=>{
+    test('if one word true',()=>{        
+        expect(trueOneWord('a', str)).toBeTruthy();
+    })  
+    test('if all word true', ()=>{
+        expect(trueOneWord('a', oneItems)).toBeTruthy();
+    }) 
+})
+
+
 
 
 
