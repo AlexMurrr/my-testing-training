@@ -78,9 +78,17 @@ function trueOneWord(inputVerb, trueVerb){
    return verb.replace(/\s/g,'');
  }
 
+ function oneWordTrue(inputVerb, trueVerb){     
+   const inputVerbs = removeEmptySpace(inputVerb);
+   const trueVerbs = removeEmptySpace(trueVerb);
+   const trueArr = trueVerbs.split(",");      
+   return trueArr.includes(inputVerbs);       
+ }
+
 exports.flatten = flatten;
 exports.sumSalary = sumSalary;
 exports.topPropInObj = topPropInObj;
 exports.arrayFromString = arrayFromString;
 exports.trueOneWord = trueOneWord;
 exports.removeEmptySpace = removeEmptySpace;
+exports.oneWordTrue = oneWordTrue;
