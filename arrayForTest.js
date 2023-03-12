@@ -1,7 +1,7 @@
 
-exports.arrayNumber = [150, 2,4,5,1,3];
-exports.fruit = ['banana', 'banana', 'apple', 'orange', 'apple'];
-exports.sortArray = (ar) => {
+const arrayNumber = [150, 2,4,5,1,3];
+const fruit = ['banana', 'banana', 'apple', 'orange', 'apple'];
+const sortArray = (ar) => {
    return ar.sort((a,b) => a-b);
 }
 
@@ -9,7 +9,7 @@ exports.sortArray = (ar) => {
 // а значением - 
 //элемент
 
-exports.fruitSort = (array) => {
+const fruitSort = (array) => {
    return array.reduce((acc, cur, i) =>{
         i++
         acc[i] = cur;
@@ -85,10 +85,10 @@ function trueOneWord(inputVerb, trueVerb){
    return trueArr.includes(inputVerbs);       
  }
 
-exports.flatten = flatten;
-exports.sumSalary = sumSalary;
-exports.topPropInObj = topPropInObj;
-exports.arrayFromString = arrayFromString;
-exports.trueOneWord = trueOneWord;
-exports.removeEmptySpace = removeEmptySpace;
-exports.oneWordTrue = oneWordTrue;
+ function arrSort (arrNumbers){
+   return arrNumbers.sort(function(a,b){
+      return a - b;
+   })
+ } 
+
+module.exports = {arrSort, fruitSort, fruit, topPropInObj, sumSalary, arrayFromString, trueOneWord, removeEmptySpace, oneWordTrue, flatten, sortArray, arrayNumber};

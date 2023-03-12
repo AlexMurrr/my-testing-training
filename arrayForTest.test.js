@@ -10,6 +10,8 @@ const flatt = arrayForTest.flatten;
 const arrFromStr = arrayForTest.arrayFromString;
 const trueOneWord = arrayForTest.trueOneWord;
 const removeEmptySpace = arrayForTest.removeEmptySpace;
+const oneWordTrue = arrayForTest.oneWordTrue;
+const arrSort = arrayForTest.arrSort;
 
 let checkForString = (array) => {
     for(let item of array){
@@ -153,6 +155,20 @@ describe('check function removeEmptySpace', ()=>{
     })
 })
 
+describe('check function oneWordTrue',()=>{
+    test('content one word is true', ()=>{
+        expect(oneWordTrue('a', 'a, b')).toBeTruthy();
+    })
+    test('more empty space', ()=>{
+        expect(oneWordTrue('   a ', 'a, b')).toBeTruthy();
+    })   
+})
+
+describe('check sort', ()=>{
+    test('sort numbers', ()=>{
+        expect(arrSort([2,1,4,3])).toEqual([1,2,3,4]);
+    })
+})
 
 
 

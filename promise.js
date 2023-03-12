@@ -1,5 +1,4 @@
 
-
 const p = new Promise((resolve, reject) =>{
     setTimeout(() => {
         console.log('Preparing data...');
