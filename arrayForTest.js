@@ -91,4 +91,8 @@ function trueOneWord(inputVerb, trueVerb){
    })
  } 
 
-module.exports = {arrSort, fruitSort, fruit, topPropInObj, sumSalary, arrayFromString, trueOneWord, removeEmptySpace, oneWordTrue, flatten, sortArray, arrayNumber};
+ function arrmap(arr){
+   return arr.map(i => i+1);
+ }
+
+module.exports = {arrSort, fruitSort, fruit, topPropInObj, sumSalary, arrayFromString, trueOneWord, removeEmptySpace, oneWordTrue, flatten, sortArray, arrayNumber, arrmap};

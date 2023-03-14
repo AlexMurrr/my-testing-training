@@ -12,6 +12,7 @@ const trueOneWord = arrayForTest.trueOneWord;
 const removeEmptySpace = arrayForTest.removeEmptySpace;
 const oneWordTrue = arrayForTest.oneWordTrue;
 const arrSort = arrayForTest.arrSort;
+const arrmap = arrayForTest.arrmap;
 
 let checkForString = (array) => {
     for(let item of array){
@@ -164,11 +165,17 @@ describe('check function oneWordTrue',()=>{
     })   
 })
 
-describe('check sort', ()=>{
+describe('check arrSort', ()=>{
     test('sort numbers', ()=>{
         expect(arrSort([2,1,4,3])).toEqual([1,2,3,4]);
-    })
+    })    
 })
+
+test('test arrmap', ()=>{
+    expect(arrmap([1,2])).toEqual([2,3]);
+})
+
+
 
 
 
