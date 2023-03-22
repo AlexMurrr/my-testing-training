@@ -13,6 +13,8 @@ const removeEmptySpace = arrayForTest.removeEmptySpace;
 const oneWordTrue = arrayForTest.oneWordTrue;
 const arrSort = arrayForTest.arrSort;
 const arrmap = arrayForTest.arrmap;
+const arrReduce= arrayForTest.arrReduce;
+const arrForEach = arrayForTest.arrForEach;
 
 let checkForString = (array) => {
     for(let item of array){
@@ -175,7 +177,9 @@ test('test arrmap', ()=>{
     expect(arrmap([1,2])).toEqual([2,3]);
 })
 
-
+test('check arrReduce', ()=>{
+    expect(arrReduce([1,2,3])).toBe(6);
+})
 
 
 

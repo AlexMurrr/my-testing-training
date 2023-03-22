@@ -95,4 +95,19 @@ function trueOneWord(inputVerb, trueVerb){
    return arr.map(i => i+1);
  }
 
-module.exports = {arrSort, fruitSort, fruit, topPropInObj, sumSalary, arrayFromString, trueOneWord, removeEmptySpace, oneWordTrue, flatten, sortArray, arrayNumber, arrmap};
+let a = 0;
+
+ function arrReduce(arr){
+   return arr.reduce((acc, cur) => 
+      {acc + cur}, a   
+   );
+ }
+
+ function arrForEach(arr){
+   arr.forEach((el, index)=>{
+    console.log(el, index);
+   })
+ }
+ arrForEach([2,3]);
+
+module.exports = {arrSort, fruitSort, fruit, topPropInObj, sumSalary, arrayFromString, trueOneWord, removeEmptySpace, oneWordTrue, flatten, sortArray, arrayNumber, arrmap, arrReduce, arrForEach};
